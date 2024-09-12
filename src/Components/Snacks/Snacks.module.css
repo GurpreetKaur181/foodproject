@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.containerroll{
+    display: block;
+     background: url("https://www.delightfoods.com/cdn/shop/collections/snacks.jpg?v=1720436902&width=1400")no-repeat;
+     height: 80vh;
+     width: 100%;
+     margin-top: 200px;
+     transition:all 4s linear 1s;
+ }
+
+ .containerroll:hover{
+      transform:scale(1.1);
+    
+ }
+

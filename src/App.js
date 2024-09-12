@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Components/header/Header.jsx';
+import React from 'react';
+import Navbar from './Components/navbar/Navbar.jsx';
+
 
 const App = () => {
   return (
     <div>
-      <Header/>
+    <Navbar/>
+    
     </div>
   );
-};
+}
 
 export default App;
