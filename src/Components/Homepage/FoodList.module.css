@@ -1,0 +1,26 @@
+/* FoodList.module.css */
+
+/* Container for the card grid */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on larger screens */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width for large screens */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr; /* Stack cards on top of each other on small screens */
+  }
+}

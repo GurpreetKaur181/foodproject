@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  margin-top: 58px;
+}
+
+/* Header Image with Light Gradient */
+.imageOverlay {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+      180deg,
+      rgba(243, 152, 49, 0.5),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("https://www.axisbank.com/images/default-source/revamp_new/contact-us/contactus.jpg")
+      no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: #b06a20; /* Light grey color for the title */
+  font-size: 3.5rem;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  margin-left: 160px; /* Increase left margin for space */
+  margin-bottom: 0;
+}
+
+/* Main content area */
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Updated Box Styling with Light Backgrounds */
+.formContainer,
+.contactDetails {
+  background: #ffffff; /* White background for boxes */
+  border-radius: 15px;
+  padding: 25px;
+  width: 38%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  color: #333333; /* Dark text for contrast */
+}
+
+.formContainer h2,
+.contactDetails h2 {
+  font-size: 2rem;
+  color: #f39831; /* Use the provided color for headers */
+  margin-bottom: 15px;
+}
+
+/* Form Styling */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.inputField,
+.textArea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #f39831; /* Orange border */
+  font-size: 0.9rem;
+  background-color: #f7f7f7; /* Light gray input background */
+  color: #333;
+}
+
+.textArea {
+  height: 100px;
+}
+
+/* Submit Button */
+.submitButton {
+  padding: 12px;
+  background-color: #f39831;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #e08c29;
+}
+
+/* Contact Details Styling */
+.contactDetails p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Additional Content Below */
+.additionalContent {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.infoBox {
+  background: #f39831;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for light look */
+  width: 40%;
+  text-align: center;
+  margin: 10px; /* Add margin to create space around the boxes */
+}
+
+.infoBox h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.infoBox p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center; /* Center align the form and contact details */
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 80%; /* Make the boxes wider for better display */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .additionalContent {
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+  }
+
+  .infoBox {
+    width: 80%; /* Increase width of the boxes on smaller screens */
+    margin-bottom: 20px; /* Ensure spacing between the boxes */
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .title {
+    margin-left: 60px;
+  }
+  .infoBox {
+    width: 90%; /* Full width for small tablets */
+    padding: 15px;
+    margin-bottom: 15px; /* Add spacing between blocks */
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 90%; /* Full width for small tablets */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .infoBox {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 100%; /* Full width on mobile */
+  }
+}
