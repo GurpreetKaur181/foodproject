@@ -1,0 +1,160 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.registerContainer {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: row; /* Default to row layout on larger screens */
+}
+
+.imageSide {
+  flex: 1;
+  position: relative;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+.formSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.formContainer {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 450px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.registerTitle {
+  color: #f39831;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form input {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus {
+  border-color: #f39831;
+  box-shadow: 0 0 8px rgba(243, 152, 49, 0.5);
+  outline: none;
+}
+
+.submitButton {
+  padding: 15px;
+  background-color: #f39831;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #e07b00;
+  transform: scale(1.05);
+}
+
+/* Media Query for Medium Screens (Tablets, Small Laptops) */
+@media (max-width: 900px) {
+  .registerContainer {
+    flex-direction: column;
+  }
+
+  .formSide {
+    padding: 100px 50px;
+    flex: none;
+  }
+
+  .imageSide {
+    display: none;
+  }
+
+  .formContainer {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .registerTitle {
+    font-size: 28px;
+  }
+
+  .form input {
+    font-size: 14px;
+  }
+
+  .submitButton {
+    font-size: 16px;
+  }
+}
+
+/* Media Query for Small Screens (Mobile Devices) */
+@media (max-width: 600px) {
+  .formContainer {
+    padding: 15px;
+  }
+
+  .form input {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .submitButton {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .registerTitle {
+    font-size: 24px;
+  }
+}

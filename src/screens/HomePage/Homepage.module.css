@@ -1,0 +1,91 @@
+/* Homepage.module.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  min-height: calc(
+    100vh - 50px
+  ); /* Adjust height to account for the fixed navbar */
+  width: 100%;
+  background: url("https://img.pikbest.com/wp/202343/enhance-the-idea-of-fast-food-presented-on-a-texture-enhanced-white-table_9989149.jpg!bw700")
+    no-repeat center center;
+  background-size: cover;
+  align-items: center;
+  padding-top: 100px;
+  margin-top: 58px; /* Offset to prevent overlap with the navbar */
+}
+
+.title {
+  color: #333;
+  font-size: 4rem; /* Increase font size */
+  margin: 0;
+  padding-top: 0;
+}
+
+.animatedSpan {
+  display: inline-block;
+  font-size: 3rem; /* Increase font size */
+  color: rgb(243, 152, 49);
+  font-weight: bold;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-60px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem; /* Adjust font size for medium screens */
+  }
+
+  .animatedSpan {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+
+  .container {
+    padding: 80px 15px; /* Adjust padding for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Further reduce font size for small screens */
+  }
+
+  .animatedSpan {
+    font-size: 1.5rem; /* Further adjust font size for small screens */
+  }
+
+  .container {
+    padding: 60px 10px; /* Further adjust padding for small screens */
+  }
+}
+
+.items_head {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

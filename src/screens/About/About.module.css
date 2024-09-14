@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.About_container {
+  overflow-y: hidden;
+  margin-top: 58px;
+}
+
+.image_container {
+  display: flex;
+  height: 200px;
+  position: relative; /* Positioned to overlay the title over the image */
+}
+
+.image_container > img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px); /* Applying blur effect to the image */
+}
+
+.heading_on_image {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  font-size: 56px;
+  color: #f39831; /* Orange color provided */
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adding depth to the text */
+  z-index: 1; /* Ensure text is on top of the image */
+}
+
+.container1 {
+  margin-top: 30px; /* Spacing for the containers */
+  background-color: #fff6e5; /* Light orange background */
+  border: 2px solid #f39831; /* Orange border for containers */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.heading {
+  font-size: 48px;
+  color: #f39831; /* Orange color provided */
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #f39831; /* Orange bottom border */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding: 20px 50px;
+  color: grey;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6; /* Increased line-height for readability */
+}
+
+/* Responsive Design: For screens smaller than 1200px (Large Tablets, Small Desktops) */
+@media (max-width: 1200px) {
+  .container1 {
+    max-width: 100%;
+    padding: 20px;
+    margin: 50px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .content {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+
+  .heading_on_image {
+    font-size: 48px;
+    left: 8%;
+  }
+}
+
+/* For tablets and small laptops (screens smaller than 900px) */
+@media (max-width: 900px) {
+  .image_container {
+    height: 180px;
+  }
+
+  .heading_on_image {
+    font-size: 36px;
+    left: 5%;
+  }
+
+  .container1 {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .content {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* For mobile screens (screens smaller than 600px) */
+@media (max-width: 600px) {
+  .image_container {
+    height: 150px;
+  }
+
+  .heading_on_image {
+    font-size: 28px;
+    left: 5%;
+  }
+
+  .container1 {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .content {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
